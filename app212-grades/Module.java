@@ -20,7 +20,7 @@ public class Module
      */
     public Module(String code, String title)
     {
-        this.code = code;
+        this.code = code; 
         this.title = title;
     }
 
