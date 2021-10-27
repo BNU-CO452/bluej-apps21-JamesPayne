@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Random;
 /**
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
@@ -50,6 +51,7 @@ public class Student
     public void awardMark(String moduleCode, int value)
     {
 
+
     }
     
     /**
@@ -67,7 +69,14 @@ public class Student
      */
     public void awardTestMarks()
     {
-        
+        int value = 45;
+        for(Module module : course.modules)
+        {
+            ModuleMark mark = new ModuleMark(module);
+            mark.setMark(value);
+            value= value + 10;
+            addMark (mark);
+        }
     }
     
     /**
@@ -103,15 +112,20 @@ public class Student
     }
     
     private void printModules()
-    {
-
+    {  
+      for(ModuleMark mark: marks)
+       
+     {
+            mark.print();
+            System.out.print("\t" + course.convertToGrade(mark.getValue()));
+        }
     }
     
     public void printTranscript()
     {
         System.out.println(" ------------------------------------");
         System.out.println(" App21-02: Exam Board Transcript 2021");
-        System.out.println("        by student name");
+        System.out.println("        by James Payne");
         System.out.println(" ------------------------------------");
         
         printCourse();
@@ -122,6 +136,7 @@ public class Student
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         
+        printModules();
        
         Grades finalGrade = course.calculateGrade(marks);
         
