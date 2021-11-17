@@ -3,8 +3,8 @@
  * credits that students achieve when they
  * pass the module with a mark of 40+
  *
- * @author Derek Peacock and Nicholas Day
- * @version 1.0 17/07/2021
+ * @author James Payne
+ * 
  */
 public class Module
 {
@@ -20,7 +20,7 @@ public class Module
      */
     public Module(String code, String title)
     {
-        this.code = code;
+        this.code = code; 
         this.title = title;
     }
 

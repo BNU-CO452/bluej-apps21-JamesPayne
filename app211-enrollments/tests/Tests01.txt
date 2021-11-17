@@ -1,0 +1,34 @@
+Course bScComputingWeb = new Course("BT1CWD1", "BSc Computing & Web");
+bScComputingWeb.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CWD1: BSc Computing & Web
+
+Student James = new Student("james", 22027350);
+Student James = new Student("James", 22027350);
+James.print();
+ Student ID: 22027350 Name: James
+James.enrol(bScComputingWeb);
+bScComputingWeb.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CWD1: BSc Computing & Web
+
+James.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CWD1: BSc Computing & Web
+
+James.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1CWD1: BSc Computing & Web
+
