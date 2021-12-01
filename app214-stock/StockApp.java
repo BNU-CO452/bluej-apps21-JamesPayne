@@ -58,6 +58,15 @@ public class StockApp
             System.out.println("product " + product.getID()
                              +  product.getName() + " has been added");
         }
+        else if(choice.equals("remove"))
+        {
+            int id = reader.getInt("Please enter the ID of the product");
+            String name = reader.getString("please enter the name of the product");
+            Product product = new Product(id, name);
+            stock.remove(product);
+            System.out.println("product " + product.getID()
+                             +  product.getName() + " has been removed");
+        }
         else if(choice.equals("print"))
         {
             stock.print();
@@ -86,7 +95,7 @@ public class StockApp
     {
         System.out.println("********************************");
         System.out.println("  App21-04: Stock Application ");
-        System.out.println("      by Student Name");
+        System.out.println("      by James Payne");
         System.out.println("********************************");
     }
 }

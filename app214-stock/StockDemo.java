@@ -4,8 +4,8 @@
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author James Payne
+ * @version 2021.12.1
  */
 public class StockDemo
 {
