@@ -49,6 +49,7 @@ public class StockApp
         {
             return true;
         }
+        //Adds a product to the list
         else if(choice.equals("add"))
         {
             int id = reader.getInt("Please enter the ID for the product");
@@ -58,6 +59,7 @@ public class StockApp
             System.out.println("product " + product.getID()
                 +  product.getName() + " has been added");
         }
+        //Deletes the product from the list 
         else if(choice.equals("remove"))
         {
             int id = reader.getInt("Please enter the ID of the product");
@@ -71,36 +73,67 @@ public class StockApp
             System.out.println("product " + product.getID()
                 +  product.getName() + " has been removed");
         }
-      
-        else if(choice.equals("print"))
+        //Buys a certain amount of the product
+        else if(choice.equals("buy"))
+        {
+            int id = reader.getInt("enter the id you wish to buy");
+            int amount = reader.getInt ("enter the quantitiy you wish to buy");
+            if(1 <= amount && amount <=10)
             {
-                stock.print();
+                stock.buyProduct(id, amount);
+                System.out.println("Succesfully Purchased" + id + amount);
+
             }
-
-            return false;
         }
-
-        /**
-         * Print out a menu of operation choices
-         */
-        private void printMenuChoices()
+        //Sells a certain amount of the product
+        else if(choice.equals("sell"))
         {
-            System.out.println();
-            System.out.println("    Add:        Add a new product");
-            System.out.println("    Remove:     Remove an old product");
-            System.out.println("    Print:      Print all products");
-            System.out.println("    Quit:       Quit the program");
-            System.out.println();        
-        }
+            int id = reader.getInt("enter the id you wish to sell");
+            int amount = reader.getInt ("enter the quantitiy you wish to sell");
+            if(1 <= amount && amount <=10)
+            {
+                stock.sellProduct(id, amount);
+                System.out.println("Succesfully Sold" + id + amount);
 
-        /**
-         * Print the title of the program and the authors name
-         */
-        private void printHeading()
-        {
-            System.out.println("********************************");
-            System.out.println("  App21-04: Stock Application ");
-            System.out.println("      by James Payne");
-            System.out.println("********************************");
+            }
         }
+        //Prints the stock list
+        else if(choice.equals("print"))
+        {
+            stock.print();
+        }
+        else if(choice.equals("search"))
+        {
+            String phrase = reader.getString("enter the name of the product");
+        }
+            
+
+        return false;
     }
+
+    /**
+     * Print out a menu of operation choices
+     */
+    private void printMenuChoices()
+    {
+        System.out.println();
+        System.out.println("    Add:        Add a new product");
+        System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Print:      Print all products");
+        System.out.println("    Quit:       Quit the program");
+        System.out.println("    Buy:        Buy a product");
+        System.out.println("    Sell:       Sell a product");
+        System.out.println();        
+    }
+
+    /**
+     * Print the title of the program and the authors name
+     */
+    private void printHeading()
+    {
+        System.out.println("********************************");
+        System.out.println("  App21-04: Stock Application ");
+        System.out.println("      by James Payne");
+        System.out.println("********************************");
+    }
+}

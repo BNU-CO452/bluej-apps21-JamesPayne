@@ -28,7 +28,7 @@ public class StockList
     {
         stock.add(item);
     }
-    
+
     /**
      * Add a product to the list.
      * @param item The product item to be added.
@@ -91,14 +91,51 @@ public class StockList
         return null;
     }
 
-     /**
+    public void searchProducts(String phrase)
+    {
+        for(Product product : stock)
+        {
+            if(product.getName().startsWith(phrase) == true)
+            {
+                System.out.println(product);
+            }
+        }
+    }
+
+    public void lowStock()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= 10)
+            {
+                System.out.println(product);
+            }
+        }
+    }
+    
+
+    public void reStock()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <=10)
+            {
+                int id = product.getID();
+                buyProduct(id,100);
+                System.out.println(product);
+            }
+
+        }
+    }
+
+    /**
      * A method to buy a single quantity of the product
      */
     public void sellProduct(int productID)
     {
         buyProduct(productID, 1);
     }
-    
+
     /**
      * Sell one of the given product.
      * Show the before and after status of the product.
@@ -176,8 +213,8 @@ public class StockList
         System.out.println(" ====================");
         System.out.println();
     }
-    
-        public Product getProduct(int id, String name) {
+
+    public Product getProduct(int id, String name) {
         for(int i=0;i<stock.size();i++) {
             Product p = stock.get(i);
             if (p.getID() == id && p.getName().equals(name)) {

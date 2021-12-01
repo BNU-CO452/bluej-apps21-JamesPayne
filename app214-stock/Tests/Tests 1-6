@@ -1,0 +1,200 @@
+
+ James' Stock List
+ ====================
+
+ ID 1: 1 stock level: 0
+ ID 101: Apple stock level: 0
+ ID 102: Orange stock level: 0
+ ID 103: Banana stock level: 0
+ ID 104: Grape stock level: 0
+ ID 105: Peach stock level: 0
+ ID 106: Strawberry stock level: 0
+ ID 107: BlueBerry stock level: 0
+ ID 108: Pear stock level: 0
+ ID 109: Melon stock level: 0
+ ID 110: Cucumber stock level: 0
+
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > quit
+Program.main({ });
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > add
+Please enter the ID for the product
+101 
+please enter a name for the prductproduct 101  has been added
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > add
+Please enter the ID for the product
+101
+please enter a name for the prduct
+Your input is blank!
+
+please enter a name for the prductApple
+product 101Apple has been added
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > print
+
+ James' Stock List
+ ====================
+
+ ID 101:   stock level: 0
+ ID 101: Apple stock level: 0
+
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > remove
+Please enter the ID of the product
+101
+please enter the name of the product
+Your input is blank!
+
+please enter the name of the productApple
+product 101Apple has been removed
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > print
+
+ James' Stock List
+ ====================
+
+ ID 101:   stock level: 0
+
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > remove
+Please enter the ID of the product
+101
+please enter the name of the product
+Your input is blank!
+
+please enter the name of the product
+
+Your input is blank!
+
+please enter the name of the product 
+product 101  has been removed
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > print
+
+ James' Stock List
+ ====================
+
+
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > remove
+Please enter the ID of the product
+111
+please enter the name of the product
+Your input is blank!
+
+please enter the name of the producthello
+Product does not exist
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > 

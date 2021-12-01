@@ -1,0 +1,84 @@
+add
+Please enter the ID for the product
+101
+please enter a name for the prduct
+Your input is blank!
+
+please enter a name for the prductApple
+product 101Apple has been added
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > Buy
+enter the id you wish to buy
+101
+enter the quantitiy you wish to buy
+10
+Bought 10 of Apple
+Succesfully Purchased10110
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > 
+Your input is blank!
+
+Please enter your choice > sell
+enter the id you wish to sell
+101
+enter the quantitiy you wish to sell
+9
+Sold 9 of Apple
+Succesfully Sold1019
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > 
+Your input is blank!
+
+Please enter your choice > print
+
+ James' Stock List
+ ====================
+
+ ID 101: Apple stock level: 1
+
+********************************
+  App21-04: Stock Application 
+      by James Payne
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Quit:       Quit the program
+    Buy:        Buy a product
+    Sell:       Sell a product
+
+Please enter your choice > 
