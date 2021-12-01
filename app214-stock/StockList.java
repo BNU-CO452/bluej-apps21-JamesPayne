@@ -172,8 +172,18 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Peacock's Stock List");
+        System.out.println(" James' Stock List");
         System.out.println(" ====================");
         System.out.println();
+    }
+    
+        public Product getProduct(int id, String name) {
+        for(int i=0;i<stock.size();i++) {
+            Product p = stock.get(i);
+            if (p.getID() == id && p.getName().equals(name)) {
+                return p;
+            }
+        }
+        return null;
     }
 } 
