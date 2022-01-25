@@ -1,0 +1,43 @@
+Game game1 = new Game();
+game1.play();
+
+Welcome to the World of Zuul!
+World of Zuul is a new, incredibly boring adventure game.
+Type 'help' if you need help.
+
+You are Outside the grand gate.
+Exits: east
+> go east
+You are Standing in the centre of a giant forrest.
+Exits: east south west
+The following things are here:
+	Wood
+
+> inventory
+You have the following: flashlight pen cellphone
+Total weight: 5
+> take wood
+there is no wood
+> go south
+You are On the bank of a lake.
+Exits: east south north
+> go east
+You are On the outskirts of a barren campground.
+Exits: west
+The following things are here:
+	Note
+	Pickaxe
+
+> go west
+You are On the bank of a lake.
+Exits: east south north
+> go south
+You are In an empty field.
+Exits: east north west
+> go east
+You are In a ghastly cemetery.
+Exits: west
+> go west
+You are In an empty field.
+Exits: east north west
+> 
