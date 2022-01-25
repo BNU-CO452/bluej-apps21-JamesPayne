@@ -15,8 +15,8 @@ import java.util.StringTokenizer;
  * the known commands, and if the input is not one of the known commands, it
  * returns a command object that is marked as an unknown command.
  * 
- * @author  Michael Kolling and David J. Barnes
- * @version 1.0 (February 2002)
+ * @author  James Payne
+ * @version 1.0 (January 2022)
  */
 
 public class Parser 
@@ -58,7 +58,7 @@ public class Parser
         else
             word2 = null;
 
-        // note: we just ignore the rest of the input line.
+        
 
         // Now check whether this word is known. If so, create a command
         // with it. If not, create a "null" command (for unknown command).

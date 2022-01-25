@@ -12,8 +12,8 @@ import java.util.ArrayList;
  * connected to other rooms via exits.  For each existing exit, the room 
  * stores a reference to the neighboring room.
  * 
- * @author  Michael Kolling and David J. Barnes
- * @version 1.0 (February 2002)
+ * @author  James Payne
+ * @version 1.0 (January 2022)
  */
 
 public class Room 
@@ -31,7 +31,7 @@ public class Room
     {
         this.description = description;
         exits = new HashMap<String, Room>();
-        items = new ArrayList<Item>();      // added by pld
+        items = new ArrayList<Item>();     
     }
 
     /**
@@ -79,7 +79,7 @@ public class Room
         String returnString = "Exits:";
         Set<String> directions = exits.keySet();
         for(String dir : directions)
-            returnString += " " + dir;          // append the string
+            returnString += " " + dir;          
         return returnString;
     }
 

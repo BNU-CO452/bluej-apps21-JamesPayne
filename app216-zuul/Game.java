@@ -13,8 +13,8 @@ import java.util.ArrayList;
  *  rooms, creates the parser and starts the game.  It also evaluates and
  *  executes the commands that the parser returns.
  * 
- * @author  Michael Kolling and David J. Barnes
- * @version 1.0 (February 2002)
+ * @author  James Payne
+ * @version 1.0 (January 2022)
  */
 
 public class Game 
@@ -40,32 +40,37 @@ public class Game
      */
     private void createRooms()
     {
-        Room outside, forrest, pub, lab, office;
+        Room outside, forrest, cave, lake, camp, field, mountain, cemetery;
       
         // create the rooms
-        outside = new Room("outside the main entrance of the university");
-        forrest = new Room("in a lecture theatre");
-        forrest.addItem(new Item("wood", 2));
-        pub = new Room("in the campus pub");
-        pub.addItem(new Item("water", 3));
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
-        office.addItem(new Item("memo", 1));
-        office.addItem(new Item("laptop", 7));
+        outside = new Room("Outside the grand gate");
+        forrest = new Room("Standing in the centre of a giant forrest");
+        forrest.addItem(new Item("Wood", 3));
+        cave = new Room("in a dark and dingy cave");
+        cave.addItem(new Item("Gold", 3));
+        lake = new Room("On the bank of a lake");
+        camp = new Room("On the outskirts of a barren campground");
+        camp.addItem(new Item("Note", 1));
+        camp.addItem(new Item("Pickaxe", 7));
+        field = new Room("In an empty field");
+        mountain = new Room("At the base of a tall mountain");
+        cemetery = new Room("In a ghastly cemetery");
         
         // initialise room exits
         outside.setExit("east", forrest);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
-
         forrest.setExit("west", outside);
-
-        pub.setExit("east", outside);
-
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
-
-        office.setExit("west", lab);
+        forrest.setExit("south", lake);
+        forrest.setExit("east", cave);
+        cave.setExit("west", forrest);
+        lake.setExit("north", forrest);
+        lake.setExit("south", field);
+        lake.setExit("east", camp);
+        camp.setExit("west", lake);
+        field.setExit("north", lake);
+        field.setExit("east", cemetery);
+        field.setExit("west", mountain);
+        mountain.setExit("east", field);
+        cemetery.setExit("west", field);
 
         currentRoom = outside;  // start game outside
         
@@ -270,6 +275,18 @@ public class Game
      * doTake: doesn't do anything yet
      */
     public void doTake(Command c) {
+                if (! c.hasSecondWord()) {  // "Take",but no object named
+            System.out.println("Take what?");
+            return;
+        }
+        String s = c.getSecondWord();
+        Item i = findByName(s, inventory);
+        if (i == null) {
+            System.out.println("there is no " + s);
+            return;
+        }
+        inventory.add(i);
+        System.out.println("You have dropped the " + s);
         System.out.println("Doesn't do anything yet.");
     }
     
