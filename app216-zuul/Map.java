@@ -4,9 +4,12 @@
  * linking all the Locations in the game to
  * form a 2D or 3D network
  *
- *  [Pub]<---->[Outside]<---->[Theatre]
+ *  [gate]<---->[forrest]<---->[cave]
  *                 |
- *          [Computer Lab]<---->[Office]
+ *               [lake]<---->[camp]
+ *                 ^
+ *                 v
+ * [mountain]<->[field]<->[cemetery]
  *             
  * @author Derek Peacock and Nicholas Day
  * @version 2021-08-22
@@ -14,8 +17,8 @@
 public class Map
 {
     // Need to add a list of exits
-    
-    private Location outside, theater, pub, lab, office;
+
+    private Location gate, forrest, cave, lake, camp, field, mountain, cemetery; 
 
     private Location currentLocation;
 
@@ -35,76 +38,105 @@ public class Map
      */
     private void createLocations()
     {
-        createOutside();
-        createTheatre();
-        createPub();
-        createOffice();
-        createLab();
+        createForrest();
+        createGate();
+        createCave();
+        createLake();
+        createCamp();
+        createField();
+        createCemetery();
+        createMountain();
 
-        currentLocation = outside;  // start game outside
+        currentLocation = forrest;  // start game at the gate
     }
-    
+
     /**
      * Create the outside and link it to the
      * theatre, lab and pub
      */
-    private void createOutside()
+    private void createGate()
     {
-        outside = new Location("outside the main entrance of the university");
+        gate = new Location("outside the main gate of the forrest");
         
-    }
+        gate.setExit("east", forrest);
+        forrest.setExit("west", gate);
     
+    }
+
+    private void createForrest()
+    {
+        forrest = new Location("outskirts of a forrest");
+    }
+
     /**
-     * Create the pub and link it to the outside
+     * Create the cave and link it to the forrest
      */
-    private void createPub()
+    private void createCave()
     {
-        pub = new Location("in the campus pub");
+        cave = new Location("in a dark cave");
         
-        pub.setExit("east", outside);
-        outside.setExit("west", pub);
+        cave.setExit("west", forrest);
+        forrest.setExit("east", cave);
     }
-    
+
     /**
-     * Create the theatre linked to the outside
+     * Create the lake linked to the forrest
      */
-    private void createTheatre()
+    private void createLake()
     {
-        theater = new Location("in a lecture theater");
-        
-        theater.setExit("west", outside);
-        outside.setExit("east", theater);
+        lake = new Location("on the bank of a lake");
+
+        lake.setExit("north", forrest);
+        forrest.setExit("south", lake);
     }
-    
+
+    private void createCamp()
+    {
+        // create the Locations
+        camp = new Location("in a barrem camp");
+
+        camp.setExit("west", lake);
+        lake.setExit("east", camp);
+    }
+
     /**
      * Create the office linked to the lab
      */
-    private void createOffice()
+    private void createField()
     {
-        office = new Location("in the computing admin office");
-        
+        field = new Location("in a large open field");
+         
+        field.setExit("north", lake);
+        lake.setExit("south", field);
+
     }
-    
+
     /**
      * Create the lab and link it to the outside and office
      */
-    private void createLab()
+    private void createCemetery()
     {
         // create the Locations
-        lab = new Location("in a computing lab");
-        
-        lab.setExit("east", office);
-        office.setExit("west", lab);
-        
-        lab.setExit("north", outside);
-        outside.setExit("south", lab);
+        cemetery = new Location("in a cemetery");
+
+        cemetery.setExit("west", field);
+        field.setExit("east", cemetery);
     }
-    
+
+    private void createMountain()
+    {
+        // create the Locations
+        mountain = new Location("at the base of a tall mountain");
+
+        mountain.setExit("east", field);
+        field.setExit("west", mountain);
+    }
+
     public Location getCurrentLocation()
     {
         return currentLocation;
     }
-    
+
     public void enterLocation(Location nextLocation)
     {
         currentLocation = nextLocation;
